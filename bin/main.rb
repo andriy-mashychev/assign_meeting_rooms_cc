@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-require_relative 'meeting_rooms_assignment'
+require_relative '../lib/zen_mate'
 
 ZenMate::MeetingRoomsAssignment.call

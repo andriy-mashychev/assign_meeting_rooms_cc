@@ -1,4 +1,3 @@
-require_relative 'meeting'
 require_relative 'meeting_room'
 
 module ZenMate
