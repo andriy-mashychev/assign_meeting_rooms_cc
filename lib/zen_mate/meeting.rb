@@ -7,12 +7,16 @@ module ZenMate
     def initialize subject:, duration_minutes:
       @subject = subject
       @duration = duration_minutes.to_i
-      raise(DurationError, 'Minutes should be a positive integer.', caller) if @duration < 1
+
+      if @duration < 1
+        raise DurationError, 'Minutes should be a positive integer.', caller
+      end
     end
 
     attr_reader :duration, :subject
 
     def <=> other
+      return unless other.is_a? self.class
       duration <=> other.duration
     end
 
